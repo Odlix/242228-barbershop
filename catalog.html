@@ -8,8 +8,8 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="container">
+  <header  class="main-header">
+    <div class="container clearfix">
       <a href="#"><img src="img/Logo.png" alt="Логотип" width="111" height="24"></a>
       <nav class="header-menu">
         <ul>
@@ -35,20 +35,20 @@
       </div>
     </div>
   </header>
-  <div class="heading">
-    <h1>СРЕДСТВА ДЛЯ УХОДА</h1>
-    <nav class="breadcrumbs">
-      <ul>
-        <li>
-          <a href="#">ГЛАВНАЯ</a></li>
-        <li><a href="#">МАГАЗИН</a></li>
-        <li><span>СРЕДСТВА ДЛЯ УХОДА</span></li>
-      </ul>
-    </nav>
-  </div>
 
-  <div class="index-content">
-    <div class="index-filter"> <!--Потом float:left и margin-left у соседнего div на ширину этого div -->
+  <div class="container clearfix">
+    <div class="heading">
+      <h1>СРЕДСТВА ДЛЯ УХОДА</h1>
+      <nav class="breadcrumbs">
+        <ul>
+          <li>
+            <a href="#">ГЛАВНАЯ</a></li>
+          <li><a href="#">МАГАЗИН</a></li>
+          <li><span>СРЕДСТВА ДЛЯ УХОДА</span></li>
+        </ul>
+      </nav>
+    </div> <!--breadcrumbs-->
+    <div class="index-filter"><!--фильтр-->
         <!--Блок производителей с выбором через checkbox -->
       <div class="manufacturers">
         <h3>ПРОИЗВОДИТЕЛИ:</h3>
@@ -85,12 +85,12 @@
             </label>
           </li>
         </ul>
-        </form>
+        <!--</form>-->
       </div>
       <!--Группы товаров через radiobutton-->
       <div class="products">
         <h3>ГРУППЫ ТОВАРОВ:</h3>
-        <form action="#" method="post">
+        <!--<form action="#" method="post">-->
           <ul>
             <li>
               <label>
@@ -112,91 +112,90 @@
       </div>
       <!--отдельная клавиша Показать-->
       <div class="price-buy">
-        <a href="#">ПОКАЗАТЬ</a>
+        <a href="#"><input type="submit" value="Показать"></a>
       </div>
     </div>
-    <div class="index-goods">
-      <!--Карточки товара -->
+    <div class="index-goods"> <!--Карточки товара -->
       <div class="goods">
         <article class="card-product">
-          <img class="img-product" src="img/baxter-nabor.jpg" alt="Набор для путешествия BAXTER OF CALIFORNIA" width="220" height="165">
-            <h4>Набор для путешествия BAXTER OF CALIFORNIA</h4>
+          <a href="#"><img class="img-product" src="img/baxter-nabor.jpg" alt="Набор для путешествия BAXTER OF CALIFORNIA" width="220" height="165"></a>
+            <h2><a href="#">Набор для путешествия BAXTER OF CALIFORNIA</a></h2>
           <div class="price-buy">
-            <div class="price-table">
+            <span>
               2900 РУБ.
-            </div>
+            </span>
             <a href="#" class="price-buy">КУПИТЬ</a>
           </div>
         </article>
         <article class="card-product">
-          <img class="img-product" src="img/baxter-kondei.jpg" alt="Увлажняющий кондиционер BAXTER OF CALIFORNIA" width="220" height="165">
+          <a href="#"><img class="img-product" src="img/baxter-kondei.jpg" alt="Увлажняющий кондиционер BAXTER OF CALIFORNIA" width="220" height="165"></a>
 
-          <h4>Увлажняющий кондиционер BAXTER OF CALIFORNIA</h4>
+          <h2><a href="#">Увлажняющий кондиционер BAXTER OF CALIFORNIA</a></h2>
           <div class="price-buy">
-            <div class="price-table">
+            <span>
               750 РУБ.
-            </div>
+            </span>
             <a href="#" class="price-buy">КУПИТЬ</a>
           </div>
         </article>
         <article class="card-product">
-          <img class="img-product" src="img/suavecito-gel.jpg" alt="Гель для волос SUAVECITO" width="220" height="165">
+          <a href="#"><img class="img-product" src="img/suavecito-gel.jpg" alt="Гель для волос SUAVECITO" width="220" height="165"></a>
 
-          <h4>Гель для волос SUAVECITO</h4>
+          <h2><a href="#">Гель для волос SUAVECITO</a></h2>
           <div class="price-buy">
-            <div class="price-table">
+            <span>
               290 РУБ.
-            </div>
+            </span>
             <a href="#" class="price-buy">КУПИТЬ</a>
           </div>
         </article>
         <article class="card-product">
-          <img class="img-product" src="img/american-crew-glina.jpg" alt="Глина для укладки AMERICAN CREW" width="220" height="165">
+          <a href="#"><img class="img-product" src="img/american-crew-glina.jpg" alt="Глина для укладки AMERICAN CREW" width="220" height="165"></a>
 
-          <h4>Глина для укладки AMERICAN CREW</h4>
+          <h2><a href="#">Глина для укладки AMERICAN CREW</a></h2>
           <div class="price-buy">
-            <div class="price-table">
+            <span>
               500 РУБ.
-            </div>
+            </span>
             <a href="#" class="price-buy">КУПИТЬ</a>
           </div>
         </article>
         <article class="card-product">
-          <img class="img-product" src="img/american-crew-gel.jpg" alt="Гель для волос AMERICAN CREW" width="220" height="165">
+          <a href="#"><img class="img-product" src="img/american-crew-gel.jpg" alt="Гель для волос AMERICAN CREW" width="220" height="165"></a>
 
-          <h4>Набор для путешествия BAXTER OF CALIFORNIA</h4>
+          <h2><a href="#">Набор для путешествия BAXTER OF CALIFORNIA</a></h2>
           <div class="price-buy">
-            <div class="price-table">
+            <span>
               2900 РУБ.
-            </div>
+            </span>
             <a href="#" class="price-buy">КУПИТЬ</a>
           </div>
         </article>
         <article class="card-product">
-          <img class="img-product" src="img/baxter-britye.jpg" alt="Набор для бритья BAXTER OF CALIFORNIA" width="220" height="165">
+          <a href="#"><img class="img-product" src="img/baxter-britye.jpg" alt="Набор для бритья BAXTER OF CALIFORNIA" width="220" height="165"></a>
 
-          <h4>Набор для бритья BAXTER OF CALIFORNIA</h4>
+          <h2><a href="#">Набор для бритья BAXTER OF CALIFORNIA</a></h2>
           <div class="price-buy">
-            <div class="price-table">
+            <span>
               3900 РУБ.
-            </div>
+            </span>
             <a href="#" class="price-buy">КУПИТЬ</a>
           </div>
         </article>
-      </div>
-      <div class="pagination">
-        <ul>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-        </ul>
+        <div class="pagination">
+          <ul>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
   <footer class="main-footer">
-    <div class="container">
+    <div class="container clearfix">
       <address class="footer-contacts">
         Барбершоп «Бородинский»<br>
           Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
@@ -205,7 +204,7 @@
       </address>
       <div class="footer-social">
         <span>Давайте дружить!</span>
-          <a class="social-btn social-btn-vk" href="#"><img src="img/bnt-vk.png" alt="vk" width="25" height="16"></a>
+          <a class="social-btn social-btn-vk" href="#"><img src="img/bnt-vk.png" alt="vk"></a>
           <a class="social-btn social-btn-fb" href="#"><img src="img/bnt-fb.png" alt="fb"></a>
           <a class="social-btn social-btn-inst" href="#"><img src="img/bnt-inst.png" alt="inst"></a>
       </div>
@@ -213,7 +212,6 @@
         <span>Разработано:</span>
           <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
       </div>
-
     </div>
   </footer>
 

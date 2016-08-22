@@ -18,6 +18,138 @@ h3 {
   font-size: 24px;
   line-height: 30px;
   color: black;
+  font-weight: 700;
+  font-family: "PT Sans";
+}
+
+h2 {
+  font-size: 14px;
+  line-height: 18px;
+  color: black;
   font-weight: normal;
   font-family: "PT Sans";
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.main-header {
+  margin-bottom: 60px;
+}
+
+.container {
+  width: 940px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.header-menu {
+  width: 780px;
+  float: left;
+}
+
+.user {
+  width: 140px;
+  float: right;
+}
+
+.heading {
+  margin-bottom: 60px;
+}
+
+.index-filter {
+  min-height: 510px;
+  float: left;
+  width: 170px;
+}
+
+.manufacturers {
+  margin-bottom: 60px;
+}
+
+.products {
+  margin-bottom: 55px;
+}
+
+.index-goods {
+  float: right;
+  width: 700px;
+}
+
+.card-product {  /*!!!!!!!!! margin-right: 10px;*/
+  display: inline-block;
+  margin-right: 10px;*/
+  margin-bottom: 20px;
+  width: 220px;
+  vertical-align: top;
+}
+
+.card-product:nth-child(3n) {
+    margin-right: 0;
+}
+
+.pagination {
+  margin-top: 45px;
+  /*margin-left: 200px;*/
+}
+
+.main-footer {
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.footer-contacts {
+  float:left;
+  width: 320px;
+  margin-right: 90px;
+}
+
+.footer-social {
+  float: left;
+  width: 180px;
+}
+
+.footer-develop {
+  float: right;
+  width: 180px;
+}
+
+.gallery {
+  float: left;
+  width: 490px;
+  margin-right: 90px;
+}
+
+.gallery-mini {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 20px;
+}
+
+.img-product {
+  margin-right: 20px;
+}
+
+.img-product:nth-child(3n) {
+    margin-right: 0;
+}
+
+.articul {
+  float: right;
+}
+
+.product-description p {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.product-description {
+  margin-bottom: 70px;
+}
+
+.product-include .list-include {
+  margin-top: 40px;
 }
