@@ -1,16 +1,20 @@
 body {
+  min-width: 960px;
+
+  font-weight: 700;
   font-size: 14px;
-  line-height: 18px;
-  color: black;
-  font-weight: normal;
-  font-family: "PT Sans";
+  line-height: 24px;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  text-transform: uppercase;
+
+  background: #f8f5f2;
 }
 
 h1 {
   font-size: 30px;
   line-height: 42px;
   color: black;
-  font-weight: normal;
+  font-weight: 700;
   font-family: "PT Sans";
 }
 
@@ -38,33 +42,233 @@ h2 {
 
 .main-header {
   margin-bottom: 60px;
+  color: #ffffff;
+
+  background-color: #000000;
 }
 
 .container {
+  position: relative;
+
   width: 940px;
   padding: 0 10px;
   margin: 0 auto;
 }
 
 .header-menu {
-  width: 780px;
+
+
+  width: 650px;
   float: left;
+  /*margin-left: 170px;*/
+}
+
+.main-logo {
+  position: absolute;
+
+  left: 10px;
+}
+
+.header-menu ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  font-size: 0;
+}
+
+.header-menu li {
+  display: inline-block;
+
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.header-menu a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 25px 20px;
+}
+
+.header-menu a:hover {
+  background: #242424;
 }
 
 .user {
-  width: 140px;
+  max-width: 140px;
   float: right;
+}
+
+.login {
+  position: relative;
+
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 25px 20px;
+  padding-left: 50px;
+
+  display: inline-block;
+  vertical-align: top;
+}
+
+.login:hover {
+  background: #242424;
+}
+
+.login::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: 20px;
+
+  width: 18px;
+  height: 18px;
+
+  background: transparent url("../img/sprite.png") no-repeat;
+  background-position: -10px -153px;
+  opacity: 0.3;
+
+}
+
+.login:hover::before {
+  opacity: 1;
 }
 
 .heading {
   margin-bottom: 60px;
 }
 
+.breadcrumbs {
+  color: grey;
+
+}
+
+.breadcrumbs ul {
+  margin: 0;
+  padding: 0;
+  list-style: square outside;        /*Как квадратики?? */
+}
+
+.breadcrumbs li {
+  display: inline-block;
+  vertical-align: top;
+
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: black;
+  margin-right: 25px;
+}
+
 .index-filter {
   min-height: 510px;
   float: left;
-  width: 170px;
+  max-width: 170px;
 }
+
+.index-filter h3 {
+  margin-top: 0;
+}
+
+/*Оформление кнопок */
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  display: block;
+  line-height: 18px;
+  padding-left: 43px;
+  margin-bottom: 27px;
+  cursor: pointer;
+
+  position: relative;
+}
+
+input[type="checkbox"] + label:hover {
+  color: #663d15;
+}
+
+input[type="checkbox"] + label::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #000000;
+  background-color: #f9f6f3;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+input[type="checkbox"]:checked + label::after {
+  content: "";
+
+  position: absolute;
+  top: 4px;
+  left: 4px;
+
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 12px;
+  background-position: -10px -10px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  display: block;
+  line-height: 18px;
+  padding-left: 43px;
+  margin-bottom: 27px;
+  cursor: pointer;
+
+  position: relative;
+}
+
+input[type="radio"] + label:hover {
+  color: #663d15;
+}
+
+input[type="radio"] + label::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  background-color: #f9f6f3;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+input[type="radio"]:checked + label::after {
+  content: "";
+
+  position: absolute;
+  top: 6px;
+  left: 6px;
+
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 8px;
+  height: 8px;
+  background-position: -10px -42px;
+}
+
+/*Конец оформления кнопок*/
 
 .manufacturers {
   margin-bottom: 60px;
@@ -77,34 +281,153 @@ h2 {
 .index-goods {
   float: right;
   width: 700px;
+  font-size: 0;
 }
 
+/*Карточки товара*/
 .card-product {  /*!!!!!!!!! margin-right: 10px;*/
   display: inline-block;
-  margin-right: 10px;*/
+  margin-right: 20px;
   margin-bottom: 20px;
   width: 220px;
+  min-height: 320px;
   vertical-align: top;
+  text-transform: none;
+
+  background-color: #f8f8f8;
+  box-shadow: 0 0 10px -2px #000000;
+
+  font-size: 0;
 }
 
 .card-product:nth-child(3n) {
     margin-right: 0;
 }
+/* Конец Карточки товара*/
+
+/*Оформление Внутри картчоки*/
+.product-bottom {
+  padding: 16px;
+}
+
+.card-product .descr-product {
+  font-size: 14px;
+  line-height: 18px;
+  color: black;
+  font-weight: normal;
+  font-family: "PT Sans";
+  text-decoration: none;
+}
+
+/*Кнопки с ценой и купить*/
+.btn {
+  display: inline-block;
+  padding: 16px 17px 16px 19px;
+
+  color: white;
+  background-color: black;
+  border: none;
+  outline: none;
+  vertical-align: top;
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #663d15;
+}
+
+.btn-grey {
+  display: inline-block;
+  padding: 16px 25px 17px 29px;
+
+  color: black;
+  background-color: #e6e6e6;
+  border: none;
+  outline: none;
+  vertical-align: top;
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+
+}
+/*Конец Кнопок купить*/
+
+.btn-filter {
+  box-sizing: border-box;
+  width: 112px;
+  height: 43px;
+  padding: 15px 23px;
+}
+/*Конец Оформления внутри карточек*/
 
 .pagination {
   margin-top: 45px;
-  /*margin-left: 200px;*/
+}
+
+.pagination ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  font-size: 0;
+}
+
+.pagination li {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 18px;
+  vertical-align: top;
+}
+
+.pagination a {
+  display: block;
+  padding: 17px 18px;
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  margin-right: 7px;
+}
+
+.pagination .selected-pagi {
+  color: black;
+  background-color: white;
+}
+
+.pagination a:hover {
+  background: #663d15;
 }
 
 .main-footer {
   margin-top: 60px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  padding-top: 60px;
+  padding-bottom: 20px;
+
+  background: #242424;
+  color: white;
 }
 
 .footer-contacts {
   float:left;
   width: 320px;
   margin-right: 90px;
+}
+
+.footer-contacts a {
+  text-decoration: underline;
+  color: white;
 }
 
 .footer-social {
@@ -117,6 +440,27 @@ h2 {
   width: 180px;
 }
 
+.social-btn {
+  display: inline-block;
+  vertical-align: top;
+  width: 43px;
+  height: 143px;
+  font-size: 0;
+  background-color: black;
+  position: relative;
+}
+
+.social-btn:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: transparent url("../img/sprite.png") no-repeat;
+  background-position: -10px -153px;
+}
+  /*--Catalog-item--*/
+
 .gallery {
   float: left;
   width: 490px;
@@ -127,14 +471,6 @@ h2 {
   display: inline-block;
   vertical-align: top;
   margin-top: 20px;
-}
-
-.img-product {
-  margin-right: 20px;
-}
-
-.img-product:nth-child(3n) {
-    margin-right: 0;
 }
 
 .articul {
@@ -153,3 +489,48 @@ h2 {
 .product-include .list-include {
   margin-top: 40px;
 }
+
+/* SPRITE*/
+.sprite {
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-icon-checked {
+    width: 12px;
+    height: 12px;
+    background-position: -10px -10px;
+}
+
+.sprite-icon-checked-rd {
+    width: 8px;
+    height: 8px;
+    background-position: -10px -42px;
+}
+
+.sprite-icon-fb {
+    width: 12px;
+    height: 22px;
+    background-position: -10px -70px;
+}
+
+.sprite-icon-inst {
+    width: 21px;
+    height: 21px;
+    background-position: -10px -112px;
+}
+
+.sprite-icon-login {
+    width: 18px;
+    height: 16px;
+    background-position: -10px -153px;
+}
+
+.sprite-icon-vk {
+    width: 25px;
+    height: 16px;
+    background-position: -10px -189px;
+}
+
+/*END SPRITE*/
