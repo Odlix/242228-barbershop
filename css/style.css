@@ -60,13 +60,14 @@ h2 {
 
   width: 650px;
   float: left;
-  /*margin-left: 170px;*/
+  margin-left: 170px;
 }
 
 .main-logo {
   position: absolute;
 
   left: 10px;
+  top: calc(50% - 12px);
 }
 
 .header-menu ul {
@@ -537,10 +538,11 @@ input[type="radio"]:checked + label::after {
   display: inline-block;
   vertical-align: top;
   margin-top: 20px;
+  font-size: 0;
 }
 
-.img-product {
-  margin-right: 20px;
+.img-product {   /*20px?*/
+  margin-right: 35px;
 }
 
 .img-product:last-child {
