@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!--1) Лого, 2) ромбики у li, 3) мини-галлерея съехала 4) перенос текста слева и в карточках -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,34 +10,34 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-  <header class="main-header">
+  <header  class="main-header">
     <div class="container clearfix">
-
       <nav class="header-menu">
         <ul>
-          <li>
-            <a href="#">ИНФОРМАЦИЯ</a>
-          </li>
-          <li>
-            <a href="#">НОВОСТИ</a>
-          </li>
-          <li>
-            <a href="#">ПРАЙС-ЛИСТ</a>
-          </li>
-          <li>
-            <a href="#">МАГАЗИН</a>
-          </li>
-          <li>
-            <a href="#">КОНТАКТЫ</a>
-          </li>
-        </ul>
+        <li>
+          <a href="#">ИНФОРМАЦИЯ</a>
+        </li>
+        <li>
+          <a href="#">НОВОСТИ</a>
+        </li>
+        <li>
+          <a href="#">ПРАЙС-ЛИСТ</a>
+        </li>
+        <li>
+          <a href="#">МАГАЗИН</a>
+        </li>
+        <li>
+          <a href="#">КОНТАКТЫ</a>
+        </li>
+      </ul>
       </nav>
       <div class="user">
         <a class="login" href="#">ВХОД</a>
       </div>
-      <a href="#"><img src="img/Logo.png" alt="Логотип" width="111" height="24"></a>
+      <a class="main-logo" href="#"><img src="img/Logo.png" alt="Логотип" width="111" height="24"></a>
     </div>
   </header>
+
   <div class="container clearfix">
     <div class="heading">
       <h1>Набор для путешествия BAXTER OF CALIFORNIA</h1>
@@ -51,7 +51,7 @@
         </ul>
       </nav>
     </div>
-    <div class="gallery">
+    <div class="gallery">  <!--Что за полосы вокруг изображений? И 3-я мини-галлерея не так -->
       <img src="img/gallery-big.jpg" alt="Набор для путешествий" width="486" height="524">
       <div class="gallery-mini">
         <img class="img-product" src="img/gallery-1.jpg" alt="Набор для путешествия BAXTER OF CALIFORNIA" width="140" height="149">
@@ -63,10 +63,10 @@
       <div class="product-description">
         <span>ЕСТЬ В НАЛИЧИИ</span>
         <span class="articul">АРТИКУЛ: DEXTER-AE</span>
-        <p>TRAVEL KIT - НЕОБХОДИМЫЙ АКСЕССУАР ВО ВРЕМЯ ЛЮБОГО ПУТЕШЕСТВИЯ. В АККУРАТНОЙ КОЖАННОЙ СУМКЕ НАХОДИТСЯ ВСЁ, ЧТО НУЖНО ДЛЯ БРИТЬЯ И УХОДА ЗА КОЖЕЙ ВО ВРЕМЯ РАБОЧЕЙ ПОЕЗДКИ ИЛИ ОТДЫХА: СРЕДСТВО ДЛЯ УМЫВАНИЯ, УВЛАЖНЯЮЩИЙ КРЕМ, КРЕМ ДЛЯ БРИТЬЯ, КРЕМ ПОСЛЕ БРИТЬЯ, ШАМПУНЬ. НАБОР ТАКЖЕ МОЖЕТ СТАТЬ ОТЛИЧНЫМ ПОДАРКОМ.</p>
+        <p>TRAVEL KIT - <a class="product-link" href="#">НЕОБХОДИМЫЙ АКСЕССУАР</a> ВО ВРЕМЯ ЛЮБОГО ПУТЕШЕСТВИЯ. В АККУРАТНОЙ КОЖАННОЙ СУМКЕ НАХОДИТСЯ ВСЁ, ЧТО НУЖНО ДЛЯ БРИТЬЯ И УХОДА ЗА КОЖЕЙ ВО ВРЕМЯ РАБОЧЕЙ ПОЕЗДКИ ИЛИ ОТДЫХА: СРЕДСТВО ДЛЯ УМЫВАНИЯ, УВЛАЖНЯЮЩИЙ КРЕМ, КРЕМ ДЛЯ БРИТЬЯ, КРЕМ ПОСЛЕ БРИТЬЯ, ШАМПУНЬ. НАБОР ТАКЖЕ МОЖЕТ СТАТЬ ОТЛИЧНЫМ ПОДАРКОМ.</p>
         <div class="price-buy">
-            <span>2900 РУБ.</span>
-          <a href="#" class="price-buy">КУПИТЬ</a>
+          <span class="btn-grey">2900 РУБ.</span>
+          <a href="#" class="btn">КУПИТЬ</a>
         </div>
       </div>
       <div class="product-include">
@@ -84,20 +84,20 @@
 
   <footer class="main-footer">
     <div class="container clearfix">
-      <address class="footer-contacts">
+      <p class="footer-contacts">
         Барбершоп «Бородинский»<br>
           Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
           <a href="#">Как нас найти?</a><br>
           Телефон: +7 (812) 666-02-66
-      </address>
+        </p>
       <div class="footer-social">
-        <span>Давайте дружить!</span>
-          <a class="social-btn social-btn-vk" href="#"><img src="img/bnt-vk.png" alt="vk"></a>
-          <a class="social-btn social-btn-fb" href="#"><img src="img/bnt-fb.png" alt="fb"></a>
-          <a class="social-btn social-btn-inst" href="#"><img src="img/bnt-inst.png" alt="inst"></a>
-      </div>
+        <p>Давайте дружить!</p>
+          <a class="social-btn social-btn-vk" href="#"></a>
+          <a class="social-btn social-btn-fb" href="#"></a>
+          <a class="social-btn social-btn-inst" href="#"></a>
+      </div>           <!--Если не спан, то как перенос на след. строку? -->
       <div class="footer-develop">
-        <span>Разработано:</span>
+        <p>Разработано:</p>
           <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
       </div>
     </div>

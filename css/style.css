@@ -128,8 +128,8 @@ h2 {
   width: 18px;
   height: 18px;
 
-  background: transparent url("../img/sprite.png") no-repeat;
-  background-position: -10px -153px;
+  background: transparent url("../img/sprite2.png") no-repeat;
+  background-position: -10px -10px;
   opacity: 0.3;
 
 }
@@ -215,11 +215,11 @@ input[type="checkbox"]:checked + label::after {
   top: 4px;
   left: 4px;
 
-  background-image: url("../img/sprite.png");
+  background-image: url("../img/sprite2.png");
   background-repeat: no-repeat;
   width: 12px;
   height: 12px;
-  background-position: -10px -10px;
+  background-position: -10px -46px;
 }
 
 input[type="radio"] {
@@ -261,11 +261,11 @@ input[type="radio"]:checked + label::after {
   top: 6px;
   left: 6px;
 
-  background-image: url("../img/sprite.png");
+  background-image: url("../img/sprite2.png");
   background-repeat: no-repeat;
   width: 8px;
   height: 8px;
-  background-position: -10px -42px;
+  background-position: -10px -245px;
 }
 
 /*Конец оформления кнопок*/
@@ -314,7 +314,7 @@ input[type="radio"]:checked + label::after {
   font-size: 14px;
   line-height: 18px;
   color: black;
-  font-weight: normal;
+  font-weight: 700;
   font-family: "PT Sans";
   text-decoration: none;
 }
@@ -417,6 +417,7 @@ input[type="radio"]:checked + label::after {
 
   background: #242424;
   color: white;
+  box-shadow: inset 0 20px 15px -5px black;
 }
 
 .footer-contacts {
@@ -430,6 +431,10 @@ input[type="radio"]:checked + label::after {
   color: white;
 }
 
+.footer-contacts a:hover {
+  text-decoration: none;
+}
+
 .footer-social {
   float: left;
   width: 180px;
@@ -437,27 +442,88 @@ input[type="radio"]:checked + label::after {
 
 .footer-develop {
   float: right;
-  width: 180px;
+  max-width: 180px;
+}
+
+.footer-develop p {
+  margin: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.footer-develop .btn {
+  margin-right: 0;
+}
+
+.footer-develop .btn:hover {
+  color: #000000;
+
+  background-color: #ffffff;
 }
 
 .social-btn {
   display: inline-block;
   vertical-align: top;
   width: 43px;
-  height: 143px;
+  height: 43px;
   font-size: 0;
   background-color: black;
   position: relative;
+
+  transition:
+    background-position 0.5s,
+    background-color 0.5s
 }
 
-.social-btn:before {
+.social-btn::before {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
+
   transform: translate(-50%, -50%);
-  background: transparent url("../img/sprite.png") no-repeat;
-  background-position: -10px -153px;
+  background: transparent url("../img/sprite2.png") no-repeat;
+
+}
+
+.social-btn:hover {   /*Как сделать картинку черной? */
+  background: white;
+}
+
+.social-btn-vk::before {
+    width: 25px;
+    height: 16px;
+    background-position: -10px -342px;
+}
+
+.social-btn-vk:hover::before {
+  width: 25px;
+  height: 16px;
+  background-position: -10px -306px;
+}
+
+.social-btn-fb::before {
+    width: 12px;
+    height: 22px;
+    background-position: -10px -120px;
+}
+
+.social-btn-fb:hover::before {
+  width: 12px;
+  height: 22px;
+  background-position: -10px -78px;
+}
+
+.social-btn-inst::before {
+    width: 21px;
+    height: 21px;
+    background-position: -10px -203px;
+}
+
+.social-btn-inst:hover::before {
+  width: 21px;
+  height: 21px;
+  background-position: -10px -162px;
 }
   /*--Catalog-item--*/
 
@@ -473,6 +539,19 @@ input[type="radio"]:checked + label::after {
   margin-top: 20px;
 }
 
+.img-product {
+  margin-right: 20px;
+}
+
+.img-product:last-child {
+  margin-right: 0;
+}
+
+.gallery img {
+
+  box-shadow: 5px 5px 5px -5px black;
+}
+
 .articul {
   float: right;
 }
@@ -486,51 +565,80 @@ input[type="radio"]:checked + label::after {
   margin-bottom: 70px;
 }
 
+.product-description .product-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .product-include .list-include {
   margin-top: 40px;
 }
 
 /* SPRITE*/
 .sprite {
-    background-image: url("../img/sprite.png");
+    background-image: url("../img/sprite2.png");
     background-repeat: no-repeat;
     display: block;
 }
 
-.sprite-icon-checked {
-    width: 12px;
-    height: 12px;
+.sprite--icon-login {
+    width: 18px;
+    height: 16px;
     background-position: -10px -10px;
 }
 
-.sprite-icon-checked-rd {
-    width: 8px;
-    height: 8px;
-    background-position: -10px -42px;
+.sprite-checked {
+    width: 12px;
+    height: 12px;
+    background-position: -10px -46px;
 }
 
-.sprite-icon-fb {
+.sprite-fb-black {
     width: 12px;
     height: 22px;
-    background-position: -10px -70px;
+    background-position: -10px -78px;
 }
 
-.sprite-icon-inst {
+.sprite-fb-white {
+    width: 12px;
+    height: 22px;
+    background-position: -10px -120px;
+}
+
+.sprite-inst-black {
     width: 21px;
     height: 21px;
-    background-position: -10px -112px;
+    background-position: -10px -162px;
 }
 
-.sprite-icon-login {
-    width: 18px;
-    height: 16px;
-    background-position: -10px -153px;
+.sprite-inst-white {
+    width: 21px;
+    height: 21px;
+    background-position: -10px -203px;
 }
 
-.sprite-icon-vk {
+.sprite-radio {
+    width: 8px;
+    height: 10px;
+    background-position: -10px -244px;
+}
+
+.sprite-romb {
+    width: 12px;
+    height: 12px;
+    background-position: -10px -274px;
+}
+
+.sprite-vk-black {
     width: 25px;
     height: 16px;
-    background-position: -10px -189px;
+    background-position: -10px -306px;
+}
+
+.sprite-vk-white {
+    width: 25px;
+    height: 16px;
+    background-position: -10px -342px;
 }
 
 /*END SPRITE*/
